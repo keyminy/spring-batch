@@ -18,11 +18,16 @@ spring:
       driver-class-name: org.h2.Driver
   batch:
     jdbc:
-      initialize-schema: embedded
+      initialize-schema: always
 
 
 ---
 spring:
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false #job자동실행안되게함
   config:
     activate:
       on-profile: mysql
@@ -32,6 +37,3 @@ spring:
       username: root
       password: 1234
       driver-class-name: com.mysql.cj.jdbc.Driver
-  batch:
-    jdbc:
-      initialize-schema: always
