@@ -27,7 +27,7 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      enabled: false #job자동실행안되게함
+      enabled: true #job자동실행안되게함
   config:
     activate:
       on-profile: mysql
